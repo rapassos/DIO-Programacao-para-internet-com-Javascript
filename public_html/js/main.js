@@ -1,6 +1,7 @@
 
 // Aula 1
 function aula1() {
+    console.log("Aula 1");
     var nome = "Rafael Passos";
     var idade = 38;
 //    alert("Bem vindo " + nome);
@@ -22,6 +23,7 @@ function aula1() {
 
 //Aula 2
 function aula2() {
+    console.log("Aula 2");
     var frutas = ["Maçã", "Pera", "Laranja"];
     console.log(frutas);
     console.log("Lista de frutas: " + frutas);
@@ -63,6 +65,7 @@ function aula2() {
 
 //Aula 3
 function aula3() {
+    console.log("Aula 3");
     var nome = prompt("Entre com o seu nome: ");
     var idade = prompt("Qual a sua idade: ");
     var pessoa = {nome: nome, idade: idade}
@@ -108,6 +111,7 @@ function aula3() {
 
 //Aula 4
 function aula4() {
+    console.log("Aula 4");
     function soma(a, b) {
         return a + b;
     }
@@ -115,28 +119,60 @@ function aula4() {
     var n2 = parseInt(prompt("Entre com o primeiro número: "));
 
     console.log("A soma de " + n1 + " e " + n2 + " é: " + soma(n1, n2));
-    
-    function validaMaioridade(idade){
+
+    function validaMaioridade(idade) {
         var maioridade = 18; //variável local
-        return idade>=maioridade?true:false;
+        return idade >= maioridade ? true : false;
     }
-    
+
     var maioridade = validaMaioridade(prompt("Informe a sua idade: ")); //variável global
-    
+
     var retorno;
     //Condifional if em sua forma normal
     /*
-    if(maioridade){
-        retorno = "Vocẽ é maior de idade!";
-    }else{
-        retorno = "Vocẽ é menor de idade!";
-    }
+     if(maioridade){
+     retorno = "Vocẽ é maior de idade!";
+     }else{
+     retorno = "Vocẽ é menor de idade!";
+     }
      * 
      */
-    
+
     // Condicional if em sua forma reduzida (simplificada)
-    retorno = maioridade?"Vocẽ é maior de idade!":"Vocẽ é menor de idade!";
-    
+    retorno = maioridade ? "Vocẽ é maior de idade!" : "Vocẽ é menor de idade!";
+
     console.log(retorno);
 }
-aula4();
+//aula4();
+
+//Aula 5
+console.log("Aula 5");
+function botao() {
+    //console.log("Obrigado por clicar.");
+    document.getElementById("agradecimento").innerHTML = "<b>Obrigado por clicar</b>";
+}
+
+function redirecionar(){
+    //window.open("https://www.github.com/rapassos/");
+    window.location.href = "https://www.github.com/rapassos/";
+}
+function trocar(el){
+    el.innerHTML = "Obrigado por passar o mouse aqui";
+    //document.getElementById("mousemove").innerHTML = "Obrigado por passar o mouse aqui";
+    //console.log("Trocar texto");
+}
+
+function voltar(el){
+    //document.getElementById("mousemove").innerHTML = "Passe o mouse aqui!!!";
+    el.innerHTML = "Passe o mouse aqui!!!";
+}
+function loading(){
+    console.log("Exemplo de onload");
+}
+function opcaoAlterada(el){
+    console.log("Foi selecionada a opção: " + el.value);
+}
+function opcaoAlterada2(el){
+    var txt = el.checked?"Sim":"Não";
+    console.log("A caixa de seleção está selecionada: " + txt);
+}

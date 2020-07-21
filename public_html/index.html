@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <script type="text/javascript" src="js/main.js"></script>
     </head>
-    <body>
+    <body onload="loading()">
         <header>
             <h1>DIO - Programação para internet com Javascript</h1>
         </header>
@@ -17,6 +17,20 @@
                 //alert("Meu primeiro js");
             </script>
             -->
+        </section>
+        <section id="aula5">
+            <button type="button" onclick="botao()">Clique aqui!!!</button>
+            <p id="agradecimento" onclick="redirecionar()"></p>
+            <p id="mousemove" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui!!!</p>
+            <p id="mousemove2" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui!!!</p>
+            
+            <select onchange="opcaoAlterada(this)">
+                <option value="1">Valor 1</option>
+                <option value="2">Valor 2</option>
+                <option value="3">Valor 3</option>
+            </select>
+            
+            <p><input type="checkbox" name="checkbox1" value="on" onchange="opcaoAlterada2(this)" /> Marque a caixa de seleção.</p>
         </section>
     </body>
 </html>
