@@ -95,17 +95,48 @@ function aula3() {
             console.log(p.nome + " é menor de idade.");
         }
     }
-    
+
     var d = new Date();
     console.log(d);
-    
-    console.log(d.getMonth()+1);
+
+    console.log(d.getMonth() + 1);
     console.log(d.getDay());
     console.log(d.getMinutes());
-    
+
 }
 //aula3();
 
+//Aula 4
+function aula4() {
+    function soma(a, b) {
+        return a + b;
+    }
+    var n1 = parseInt(prompt("Entre com o primeiro número: "));
+    var n2 = parseInt(prompt("Entre com o primeiro número: "));
 
-
-
+    console.log("A soma de " + n1 + " e " + n2 + " é: " + soma(n1, n2));
+    
+    function validaMaioridade(idade){
+        var maioridade = 18; //variável local
+        return idade>=maioridade?true:false;
+    }
+    
+    var maioridade = validaMaioridade(prompt("Informe a sua idade: ")); //variável global
+    
+    var retorno;
+    //Condifional if em sua forma normal
+    /*
+    if(maioridade){
+        retorno = "Vocẽ é maior de idade!";
+    }else{
+        retorno = "Vocẽ é menor de idade!";
+    }
+     * 
+     */
+    
+    // Condicional if em sua forma reduzida (simplificada)
+    retorno = maioridade?"Vocẽ é maior de idade!":"Vocẽ é menor de idade!";
+    
+    console.log(retorno);
+}
+aula4();
