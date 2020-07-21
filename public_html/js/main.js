@@ -18,6 +18,7 @@ function aula1() {
     frase = frase.replace("Japão", "Brasil");
     console.log(frase.toLocaleUpperCase());
 }
+// aula1();
 
 //Aula 2
 function aula2() {
@@ -44,21 +45,67 @@ function aula2() {
     frutas.sort();
     console.log("Lista de frutas ordenada: " + frutas);
     console.log("A lista de frutas tem " + frutas.length + " elementos.");
-    
+
     console.log(frutas.toString());
     console.log(frutas.join(" | "));
-    
-    var fruta = {nome:"Maçã",cor:"Vermelha"};
+
+    var fruta = {nome: "Maçã", cor: "Vermelha"};
     console.log(fruta);
     console.log("A " + fruta.nome + " é " + fruta.cor + ".");
-    
-    var lstFrutas = [{nome:"Maçã",cor:"Vermelha"},{nome:"Melancia",cor:"Verde"},{nome:"Laranja",cor:"Laranja"},{nome:"Uva",cor:"Roxa"}];
+
+    var lstFrutas = [{nome: "Maçã", cor: "Vermelha"}, {nome: "Melancia", cor: "Verde"}, {nome: "Laranja", cor: "Laranja"}, {nome: "Uva", cor: "Roxa"}];
     console.log(lstFrutas);
     console.log(lstFrutas[0].nome);
     console.log(lstFrutas[2].nome);
 }
+//aula2();
 
-// Execução
-// 
-// aula1();
-aula2();
+
+//Aula 3
+function aula3() {
+    var nome = prompt("Entre com o seu nome: ");
+    var idade = prompt("Qual a sua idade: ");
+    var pessoa = {nome: nome, idade: idade}
+    console.log(pessoa.nome + " tem " + pessoa.idade + " anos.");
+    if (pessoa.idade >= 18) {
+        console.log(pessoa.nome + " é maior de idade.");
+    } else {
+        console.log(pessoa.nome + " é menor de idade.");
+    }
+
+    var count = 0;
+    while (count < 5) {
+        console.log(count);
+        //count = count+1;
+        //count += 1;
+        count++;
+    }
+
+    for (var i = 0, max = 5; i < max; i++) {
+        console.log(i);
+    }
+
+    var pessoas = [{nome: "Larissa", idade: 7}, {nome: "Arthur", idade: 12}, {nome: "Cleide", idade: 37}, {nome: "Rafael", idade: 38}];
+    for (i in pessoas) {
+        var p = pessoas[i];
+        console.log(p.nome + " tem " + p.idade + " anos.");
+        if (p.idade >= 18) {
+            console.log(p.nome + " é maior de idade.");
+        } else {
+            console.log(p.nome + " é menor de idade.");
+        }
+    }
+    
+    var d = new Date();
+    console.log(d);
+    
+    console.log(d.getMonth()+1);
+    console.log(d.getDay());
+    console.log(d.getMinutes());
+    
+}
+//aula3();
+
+
+
+
